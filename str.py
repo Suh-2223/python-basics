@@ -1,4 +1,4 @@
-//CONDITIONALM STATEMENTS
+#CONDITIONAL STATEMENTS
 #QUES 1
 marks=int(input("enter marks:"))
 if marks>=90:
@@ -161,9 +161,71 @@ print(set)
 #QUES 8
 set1={"apple","banana","kiwi","mango"}
 set2={"red","green","yellow","white","black","mango"}
-print(set1 | set2)
+print(set1.union(set2))
+#QUES 9
 print(set1 & set2)
+#QUES 10
 print(set1-set2)
+
+#QUES 11
+set1={"apple","banana","kiwi","mango"}
+a=set1.copy()
+a.add("strawberry")
+a.remove("banana")
+print(set1)
+print(a)
+
+#QUES 12
+a.clear()
+print(a)
+
+#QUES 13
+list1=[1,2,3,3,9,4,5,6,9]
+set1=set(list1)
+print(set1)
+
+#QUES 14
+a=input("enter a string:")
+unique_chars=set(a)
+print("unique characters are:",unique_chars)
+
+#QUES 15
+listf=["arun","bob","charlie","david","sam"]
+listc=["charlie","david","eva","frank","simran"]
+setf=set(listf)
+setc=set(listc)
+print("students who play football:",setf)
+print("students who play cricket:",setc)
+print("students who play both sports are:",setf&setc)
+
+QUES 16
+# print("students who played only cricket are:",setf-setc)
+
+#QUES 17
+sentence=input("enter a sentence:")
+a=sentence.split()
+unique_words=set(a)
+print("unique words are:",unique_words)
+
+#QUES 18
+set1={"apple","banana","kiwi","mango"}
+set2={"banana","kiwi","mango","apple"}
+a=set1==set2
+print(a)
+
+#QUES 19
+set1={"pink","blue","white"}
+set2={"white","red","purple"}
+if set1&set2:
+    print("common elements exist")
+else:
+    print("no common elements")
+
+#QUES 20
+list1=[1,2,3,3,9,4,5,6,9]
+set1=set(list1)
+unique_elem=list(set1)
+print("list of unique elements:",unique_elem)
 
 #DICTIONARY
 #QUES 1
@@ -231,6 +293,17 @@ if "apple" in fruits:
 else:
     print("does not exists")
 
+#QUES 19
+list1=["name","age","city"]
+list2=["Amit",25,"Delhi"]
+dict1=dict(zip(list1,list2))
+print(dict1)
+
+#QUES 20
+dict={"name":"suhani","age":20,"course":"B.tech"}
+swapped_dict={value:key for key,value in dict.items()}
+print(swapped_dict)
+
 #FUNCTION
 #QUES 1
 def fun():
@@ -274,7 +347,7 @@ result=fun(1,2,3,4,5)
 print(result)
 
 
-#QUES 8
+#QUES 9
 def factorial(n):
     fact=1
     for i in range(1,n+1):
@@ -282,4 +355,5 @@ def factorial(n):
     return fact
 result=factorial(5)
 print(result)
+
 
