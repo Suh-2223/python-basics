@@ -1,5 +1,43 @@
 #CONDITIONAL STATEMENTS
 #QUES 1
+n=int(input("enter number:"))
+if  n>0:
+    print("postive")
+elif n<0:
+    print("negative")
+else:
+    print("zero")
+
+ #QUES 2
+Age=int(input("enter age:"))
+if Age>=18:
+    print("eligible to vote")
+else:
+    print("not eligibe to  vote")
+
+ #QUES 3
+n=int(input("enter number:"))
+if  n%2==0:
+    print("even")
+else:
+    print("odd")
+
+#QUES 4
+a=int(input("enter number:"))
+b=int(input("enter number:"))
+if  a>b:
+    print(a,"is greater than",b)
+else:
+    print(b,"is greater than",a)
+
+#QUES 5
+n=int(input("enter number:"))
+if  n%5==0:
+    print("divisible by 5")
+else:
+    print("not divisible by 5")
+
+#QUES 6
 marks=int(input("enter marks:"))
 if marks>=90:
     print("grade A")
@@ -10,7 +48,7 @@ elif marks>=50:
 else:
     print("grade D")
 
-#QUES 2
+#QUES 7
 year=int(input("enter year"))
 if year%4==0:
     print("leap year")
@@ -19,7 +57,7 @@ elif year%100!=0 and year%400==0:
 else:
     print("not leap year")
 
-#QUES 3
+# QUES 8
 no=int(input("enter number:"))
 if no<10:
     print("single digit")
@@ -28,7 +66,7 @@ elif no<100:
 else:
     print("more than two digits")
 
-#QUES 4
+# QUES 9
 n=int(input("enter days:"))
 if n==1:
     print("Monday")
@@ -45,7 +83,7 @@ elif n==6:
 else:
     print("Sunday")
 
-#QUES 5
+# QUES 10
 temp=int(input("enter temperature:"))
 if temp<0:
     print("freezing")
@@ -56,16 +94,52 @@ elif 21<temp<35:
 else:
     print("hot")
 
-#QUES 6
+# QUES 11
 n=int(input("enter number:"))
 if n%2==0 and n>0:
-    print("postive")
+    print("postive and even")
 elif n%2!=0 and n>0:
-    print("odd")
+    print("positive and odd")
 else:
     print("negative")
- 
-# DATA TYPES
+
+# QUES 12
+pswd=input("enter password:")
+if pswd== "admin123":
+     print("access granted")
+else:
+     print("access denied")
+
+# QUES 13
+a=int(input("enter first side of triangle:"))
+b=int(input("enter second side of triangle:"))
+c=int(input("enter third side of triangle:"))
+if a+b>c and b+c>a and c+a>b:
+    print("valid triangle")
+else:
+    print("not a valid triangle")
+
+# QUES 14
+m=int(input("enter marks in math:"))
+s=int(input("enter marks in science:"))
+e=int(input("enter marks in english:"))
+total=m+s+e
+if total>=35:
+    print("pass")
+else:
+    print("fail")
+
+# QUES 15
+ch=input("enter a character:")
+if ch.isalpha():
+    if ch in 'aeiouAEIOU':
+        print("vowel")
+    else:
+        print("consonant")
+else:
+    print("not an alphabet")
+    
+# DATA STRUCTURE
 #QUES 1
 list=[1,2,3,4,5]
 print(list[0])
@@ -280,6 +354,17 @@ print(student)
 student.update({"age":21})
 print(student)
 
+#QUES 15
+sentence=input("enter a sentence:")
+a=sentence.split()
+freq={}
+for word in a:
+    if word in freq:
+        freq[word]+=1
+    else:
+        freq[word]=1
+print("word frequency:",freq)
+
 #QUES 16
 products={"a":199,"b":67,"d":159,"c":56}
 for product,price in products.items():
@@ -292,6 +377,17 @@ if "apple" in fruits:
     print("apple exists:")
 else:
     print("does not exists")
+
+#QUES 18
+marks={
+    "Suman":90,
+    "Veer":83,
+    "Siya":56,
+    "Athrava":67,
+    "Rahul":98}
+topper=max(marks,key=marks.get)
+print("topper is:",topper)
+print("highest marks:",marks[topper])
 
 #QUES 19
 list1=["name","age","city"]
@@ -346,6 +442,17 @@ def fun(a,b,c,d,e):
 result=fun(1,2,3,4,5)
 print(result)
 
+#QUES 8
+def fun(s):
+    vowels="aeiouAEIOU"
+    count=0
+    for char in s:
+        if char in vowels:
+            count+=1
+    return count
+
+result=fun("Hello World")
+print("number of vowels:",result)
 
 #QUES 9
 def factorial(n):
@@ -355,5 +462,17 @@ def factorial(n):
     return fact
 result=factorial(5)
 print(result)
+
+#QUES 10
+def palindrome(s):
+    s=s.lower()
+    s=s[::-1] #reverse a string and compare
+    return s
+
+text=input("enter a string:")
+if palindrome(text):
+    print("palindrome")
+else:
+    print("not palindrome")
 
 
